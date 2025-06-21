@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile gamemode",
+      "type": "shell",
+      "command": "pawncc",
+      "args": ["${file}", "-i${workspaceRoot}/pawno/include", "-o${workspaceRoot}/gamemodes/${fileBasenameNoExtension}.amx"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": false,
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated"
+      },
+      "problemMatcher": "$pawncc"
+    }, 
+        {
+      "label": "compile script",
+      "type": "shell",
+      "command": "pawncc",
+      "args": ["${file}", "-i${workspaceRoot}/pawno/include", "-o${workspaceRoot}/filterscripts/${fileBasenameNoExtension}.amx"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": false,
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated"
+      },
+      "problemMatcher": "$pawncc"
+    }
+  ]
+}
