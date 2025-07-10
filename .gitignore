@@ -1,2 +1,1 @@
-# ignore all logs
-*_log.txt
+server_log.txt
