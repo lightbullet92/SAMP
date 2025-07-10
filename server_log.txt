@@ -1,0 +1,220 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:06:51] 
+[02:06:51] Server Plugins
+[02:06:51] --------------
+[02:06:51]  Loaded 0 plugins.
+
+[02:06:51] 
+[02:06:51] Filterscripts
+[02:06:51] ---------------
+[02:06:51]   Loading filterscript 'lb_savepos.amx'...
+[02:06:51]   Loaded 1 filterscripts.
+
+[02:06:51] Loaded 7 classes from: classes/unique.txt
+[02:06:51] Loaded 8 classes from: classes/cops.txt
+[02:06:51] Loaded 14 classes from: classes/civil.txt
+[02:06:51] Loaded 199 classes from: classes/workers.txt
+[02:06:51] Loaded 12 classes from: classes/characters.txt
+[02:06:51] Total classes from files: 240
+[02:06:51] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[02:06:51] Loaded 4 vehicles from: vehicles/13_additions.txt
+[02:06:51] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[02:06:51] Loaded 35 vehicles from: vehicles/uncommented.txt
+[02:06:51] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[02:06:51] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[02:06:51] Total vehicles from files: 233
+[02:06:51] Loaded 5 pickups from: pickups/25_4_update.txt
+[02:06:51] Total pickups from files: 5
+[02:06:51] 
+----------------------------------
+[02:06:51]   Running SA:MP ~Light Bullet Server
+
+[02:06:51]              Coded By
+[02:06:51]          Light Bullet team
+[02:06:51] ----------------------------------
+
+[02:06:51] Number of vehicle models: 64
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:18:24] 
+[21:18:24] Server Plugins
+[21:18:24] --------------
+[21:18:24]  Loaded 0 plugins.
+
+[21:18:24] 
+[21:18:24] Filterscripts
+[21:18:24] ---------------
+[21:18:24]   Loading filterscript 'lb_savepos.amx'...
+[21:18:24]   Loaded 1 filterscripts.
+
+[21:18:24] Loaded 7 classes from: classes/unique.txt
+[21:18:24] Loaded 8 classes from: classes/cops.txt
+[21:18:24] Loaded 14 classes from: classes/civil.txt
+[21:18:24] Loaded 199 classes from: classes/workers.txt
+[21:18:24] Loaded 12 classes from: classes/characters.txt
+[21:18:24] Total classes from files: 240
+[21:18:24] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[21:18:24] Loaded 4 vehicles from: vehicles/13_additions.txt
+[21:18:24] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[21:18:24] Loaded 35 vehicles from: vehicles/uncommented.txt
+[21:18:24] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[21:18:24] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[21:18:24] Total vehicles from files: 233
+[21:18:24] Loaded 5 pickups from: pickups/25_4_update.txt
+[21:18:24] Total pickups from files: 5
+[21:18:24] 
+----------------------------------
+[21:18:24]   Running SA:MP ~Light Bullet Server
+
+[21:18:24]              Coded By
+[21:18:24]          Light Bullet team
+[21:18:24] ----------------------------------
+
+[21:18:24] Number of vehicle models: 64
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:22:48] 
+[21:22:48] Server Plugins
+[21:22:48] --------------
+[21:22:48]  Loaded 0 plugins.
+
+[21:22:48] 
+[21:22:48] Filterscripts
+[21:22:48] ---------------
+[21:22:48]   Loading filterscript 'lb_savepos.amx'...
+[21:22:48]   Loaded 1 filterscripts.
+
+[21:22:48] Loaded 7 classes from: classes/unique.txt
+[21:22:48] Loaded 8 classes from: classes/cops.txt
+[21:22:48] Loaded 14 classes from: classes/civil.txt
+[21:22:48] Loaded 199 classes from: classes/workers.txt
+[21:22:48] Loaded 12 classes from: classes/characters.txt
+[21:22:48] Total classes from files: 240
+[21:22:48] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[21:22:48] Loaded 4 vehicles from: vehicles/13_additions.txt
+[21:22:48] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[21:22:48] Loaded 35 vehicles from: vehicles/uncommented.txt
+[21:22:48] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[21:22:48] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[21:22:48] Total vehicles from files: 233
+[21:22:48] Loaded 5 pickups from: pickups/25_4_update.txt
+[21:22:48] Total pickups from files: 5
+[21:22:48] 
+----------------------------------
+[21:22:48]   Running SA:MP ~Light Bullet Server
+
+[21:22:48]              Coded By
+[21:22:48]          Light Bullet team
+[21:22:48] ----------------------------------
+
+[21:22:48] Number of vehicle models: 64
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:04:22] 
+[01:04:22] Server Plugins
+[01:04:22] --------------
+[01:04:22]  Loaded 0 plugins.
+
+[01:04:24] 
+[01:04:24] Filterscripts
+[01:04:24] ---------------
+[01:04:24]   Loading filterscript 'lb_savepos.amx'...
+[01:04:24]   Loaded 1 filterscripts.
+
+[01:04:24] Loaded 7 classes from: classes/unique.txt
+[01:04:25] Loaded 8 classes from: classes/cops.txt
+[01:04:25] Loaded 14 classes from: classes/civil.txt
+[01:04:25] Loaded 199 classes from: classes/workers.txt
+[01:04:25] Loaded 12 classes from: classes/characters.txt
+[01:04:25] Total classes from files: 240
+[01:04:25] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[01:04:25] Loaded 4 vehicles from: vehicles/13_additions.txt
+[01:04:25] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[01:04:25] Loaded 35 vehicles from: vehicles/uncommented.txt
+[01:04:25] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[01:04:25] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[01:04:25] Total vehicles from files: 233
+[01:04:25] Loaded 5 pickups from: pickups/25_4_update.txt
+[01:04:25] Total pickups from files: 5
+[01:04:25] 
+----------------------------------
+[01:04:25]   Running SA:MP ~Light Bullet Server
+
+[01:04:25]              Coded By
+[01:04:25]          Light Bullet team
+[01:04:25] ----------------------------------
+
+[01:04:25] Number of vehicle models: 64
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:17:36] 
+[17:17:36] Server Plugins
+[17:17:36] --------------
+[17:17:36]  Loaded 0 plugins.
+
+[17:17:36] 
+[17:17:36] Filterscripts
+[17:17:36] ---------------
+[17:17:36]   Loading filterscript 'lb_savepos.amx'...
+[17:17:36]   Loaded 1 filterscripts.
+
+[17:17:36] Loaded 7 classes from: classes/unique.txt
+[17:17:36] Loaded 8 classes from: classes/cops.txt
+[17:17:36] Loaded 14 classes from: classes/civil.txt
+[17:17:37] Loaded 199 classes from: classes/workers.txt
+[17:17:37] Loaded 12 classes from: classes/characters.txt
+[17:17:37] Total classes from files: 240
+[17:17:37] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[17:17:37] Loaded 4 vehicles from: vehicles/13_additions.txt
+[17:17:37] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[17:17:37] Loaded 35 vehicles from: vehicles/uncommented.txt
+[17:17:37] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[17:17:37] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[17:17:37] Total vehicles from files: 233
+[17:17:37] Loaded 5 pickups from: pickups/25_4_update.txt
+[17:17:37] Total pickups from files: 5
+[17:17:37] 
+----------------------------------
+[17:17:37]   Running SA:MP ~Light Bullet Server
+
+[17:17:37]              Coded By
+[17:17:37]          Light Bullet team
+[17:17:37] ----------------------------------
+
+[17:17:37] Number of vehicle models: 64
