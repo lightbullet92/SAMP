@@ -21,20 +21,20 @@ new gActivePlayers[MAX_PLAYERS];
 
 main()
 {
-		print("\n----------------------------------");
-		print("Running SA:MP ~Light Bullet Server\n");
-		print("           Coded By");
-		print("       Light Bullet team");
-		print("----------------------------------\n");
+	print("\n----------------------------------");
+	print("Running SA:MP ~Light Bullet Server\n");
+	print("           Coded By");
+	print("       Light Bullet team");
+	print("----------------------------------\n");
 }
 
 public OnGameModeInit()
 {
 	SetGameModeText("Light Bullet SA:MP Server");
 
-	ShowPlayerMarkers(1);
-	ShowNameTags(1);
-	EnableStuntBonusForAll(0);
+	ShowPlayerMarkers(0);
+	ShowNameTags(0);
+	EnableStuntBonusForAll(1);
 
     //Classes
 	total_classes_from_files += LoadClassesFromFile("classes/unique.txt");
@@ -81,21 +81,28 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 public OnPlayerDeath(playerid, killerid, reason)
 {
     new playercash;
+	new killprice = 500;
 	if(killerid == INVALID_PLAYER_ID) {
         SendDeathMessage(INVALID_PLAYER_ID,playerid,reason);
-        ResetPlayerMoney(playerid);
-	} else {
-	    	SendDeathMessage(killerid,playerid,reason);
-			SetPlayerScore(killerid,GetPlayerScore(killerid)+1);
-			playercash = GetPlayerMoney(playerid);
-			if (playercash > 0)  {
-				GivePlayerMoney(killerid, playercash);
+        //ResetPlayerMoney(playerid);
+	}
+	else
+	{
+		SendDeathMessage(killerid,playerid,reason);
+		SetPlayerScore(killerid,GetPlayerScore(killerid)+1);
+		playercash = GetPlayerMoney(playerid);
+		GivePlayerMoney(killerid, killprice);
+		if (playercash > 0)  {
+			if (playercash > killprice)
+			{
+				playercash -= killprice;
 				ResetPlayerMoney(playerid);
+				GivePlayerMoney(playerid, playercash);
 			}
 			else
-			{
-			}
-     	}
+				ResetPlayerMoney(playerid);
+		}
+	}
  	return 1;
 }
 
