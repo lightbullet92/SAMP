@@ -19,7 +19,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
             SendClientMessage(playerid,0xFFFFF00,"Please, try: /savepos [name]");
         else
         {
-            new Float:x, Float:y, Float:z, Float:angle;
+            new Float:x, Float:y, Float:z, Float:angle, string[256];
             new filename[] = "custom/saved.txt";
             GetPlayerPos(playerid, x, y, z);
             if(IsPlayerInAnyVehicle(playerid))
@@ -27,8 +27,23 @@ public OnPlayerCommandText(playerid, cmdtext[])
             else
                 GetPlayerFacingAngle(playerid, angle);
             SavePosToFile(filename,tmp,x, y, z, angle);
-            SendClientMessage(playerid,0x0000FF,"Position saved.");
+            format(string,sizeof(string),"Position %s saved to %s", tmp, filename);
+            SendClientMessage(playerid,0x0000FFFF,string);
+            format(string,sizeof(string),"Your position: %1.f, %1.f, %1.f. Your rotation: %1.f", x, y, z, angle);
+            SendClientMessage(playerid,0xFF00FFFF,string);
         }
+        return 1;
+    }
+    if(strcmp(cmd,"/getpos",true)==0)
+    {
+        new Float:x, Float:y, Float:z, Float:angle, string[256];
+        GetPlayerPos(playerid, x, y, z);
+        if(IsPlayerInAnyVehicle(playerid))
+            GetVehicleZAngle(GetPlayerVehicleID(playerid), angle);
+        else
+            GetPlayerFacingAngle(playerid, angle);
+        format(string,sizeof(string),"Your position: %1.f, %1.f, %1.f. Your rotation: %1.f", x, y, z, angle);
+        SendClientMessage(playerid,0xFF00FFFF,string);
         return 1;
     }
     return 0;
