@@ -4,10 +4,23 @@
 #include "../include/lb_common.inc"
 #include "../include/lb_indexers.inc"
 #include "../include/lb_formatted.inc"
+#include "../include/lb_spawns.inc"
 
 new total_vehicles_from_files=0;
 new total_pickups_from_files=0;
 new total_classes_from_files=0;
+
+new playerName[MAX_PLAYERS][24];
+//new playerMoney = 0;
+
+new gPlayerCitySelection[MAX_PLAYERS];
+new gPlayerHasCitySelected[MAX_PLAYERS];
+new gPlayerLastCitySelectionTick[MAX_PLAYERS];
+
+new Text:txtClassSelHelper;
+new Text:txtLosSantos;
+new Text:txtSanFierro;
+new Text:txtLasVenturas;
 
 #pragma tabsize 0
 
@@ -17,12 +30,19 @@ new total_classes_from_files=0;
 #define COLOR_YELLOW 0xFFFF00AA
 #define COLOR_WHITE 0xFFFFFFAA
 #define PocketMoney 50000 // Amount player recieves on spawn.
+#define KILLPRICE 500
 #define INACTIVE_PLAYER_ID 255
 #define GIVECASH_DELAY 5000 // Time in ms between /givecash commands.
 
+#define COLOR_NORMAL_PLAYER 0xFF4444FF
+
+#define CITY_LOS_SANTOS 	0
+#define CITY_SAN_FIERRO 	1
+#define CITY_LAS_VENTURAS 	2
+
 #define NUMVALUES 4
 
-forward MoneyGrubScoreUpdate();
+//forward MoneyGrubScoreUpdate();
 forward Givecashdelaytimer(playerid);
 forward SetPlayerRandomSpawn(playerid);
 forward SetupPlayerForClassSelection(playerid);
@@ -32,44 +52,7 @@ forward public SendAllFormattedText(playerid, const str[], define);
 
 //------------------------------------------------------------------------------------------------------
 
-new CashScoreOld;
-new iSpawnSet[MAX_PLAYERS];
-
-new Float:gRandomPlayerSpawns[23][3] = {
-{1958.3783,1343.1572,15.3746},
-{2199.6531,1393.3678,10.8203},
-{2483.5977,1222.0825,10.8203},
-{2637.2712,1129.2743,11.1797},
-{2000.0106,1521.1111,17.0625},
-{2024.8190,1917.9425,12.3386},
-{2261.9048,2035.9547,10.8203},
-{2262.0986,2398.6572,10.8203},
-{2244.2566,2523.7280,10.8203},
-{2335.3228,2786.4478,10.8203},
-{2150.0186,2734.2297,11.1763},
-{2158.0811,2797.5488,10.8203},
-{1969.8301,2722.8564,10.8203},
-{1652.0555,2709.4072,10.8265},
-{1564.0052,2756.9463,10.8203},
-{1271.5452,2554.0227,10.8203},
-{1441.5894,2567.9099,10.8203},
-{1480.6473,2213.5718,11.0234},
-{1400.5906,2225.6960,11.0234},
-{1598.8419,2221.5676,11.0625},
-{1318.7759,1251.3580,10.8203},
-{1558.0731,1007.8292,10.8125},
-//{-857.0551,1536.6832,22.5870},   Out of Town Spawns
-//{817.3494,856.5039,12.7891},
-//{116.9315,1110.1823,13.6094},
-//{-18.8529,1176.0159,19.5634},
-//{-315.0575,1774.0636,43.6406},
-{1705.2347,1025.6808,10.8203}
-};
-
-new Float:gCopPlayerSpawns[2][3] = {
-{2297.1064,2452.0115,10.8203},
-{2297.0452,2468.6743,10.8203}
-};
+//new CashScoreOld;
 
 //Round code stolen from mike's Manhunt :P
 //new gRoundTime = 3600000;                   // Round time - 1 hour
@@ -94,6 +77,167 @@ main()
 		print("----------------------------------\n");
 }
 
+ClassSel_SetupCharSelection(playerid)
+{
+   	if(gPlayerCitySelection[playerid] == CITY_LOS_SANTOS) {
+		SetPlayerInterior(playerid,11);
+		SetPlayerPos(playerid,508.7362,-87.4335,998.9609);
+		SetPlayerFacingAngle(playerid,0.0);
+    	SetPlayerCameraPos(playerid,508.7362,-83.4335,998.9609);
+		SetPlayerCameraLookAt(playerid,508.7362,-87.4335,998.9609);
+	}
+	else if(gPlayerCitySelection[playerid] == CITY_SAN_FIERRO) {
+		SetPlayerInterior(playerid,3);
+		SetPlayerPos(playerid,-2673.8381,1399.7424,918.3516);
+		SetPlayerFacingAngle(playerid,181.0);
+    	SetPlayerCameraPos(playerid,-2673.2776,1394.3859,918.3516);
+		SetPlayerCameraLookAt(playerid,-2673.8381,1399.7424,918.3516);
+	}
+	else if(gPlayerCitySelection[playerid] == CITY_LAS_VENTURAS) {
+		SetPlayerInterior(playerid,3);
+		SetPlayerPos(playerid,349.0453,193.2271,1014.1797);
+		SetPlayerFacingAngle(playerid,286.25);
+    	SetPlayerCameraPos(playerid,352.9164,194.5702,1014.1875);
+		SetPlayerCameraLookAt(playerid,349.0453,193.2271,1014.1797);
+	}
+	
+}
+
+//----------------------------------------------------------
+// Used to init textdraws of city names
+
+ClassSel_InitCityNameText(Text:txtInit)
+{
+  	TextDrawUseBox(txtInit, 0);
+	TextDrawLetterSize(txtInit,1.25,3.0);
+	TextDrawFont(txtInit, 0);
+	TextDrawSetShadow(txtInit,0);
+    TextDrawSetOutline(txtInit,1);
+    TextDrawColor(txtInit,0xEEEEEEFF);
+    TextDrawBackgroundColor(txtClassSelHelper,0x000000FF);
+}
+
+//----------------------------------------------------------
+
+ClassSel_InitTextDraws()
+{
+    // Init our observer helper text display
+	txtLosSantos = TextDrawCreate(10.0, 380.0, "Los Santos");
+	ClassSel_InitCityNameText(txtLosSantos);
+	txtSanFierro = TextDrawCreate(10.0, 380.0, "San Fierro");
+	ClassSel_InitCityNameText(txtSanFierro);
+	txtLasVenturas = TextDrawCreate(10.0, 380.0, "Las Venturas");
+	ClassSel_InitCityNameText(txtLasVenturas);
+
+    // Init our observer helper text display
+	txtClassSelHelper = TextDrawCreate(10.0, 415.0, " Press ~b~~k~~GO_LEFT~ ~w~or ~b~~k~~GO_RIGHT~ ~w~to switch cities.~n~ Press ~r~~k~~PED_FIREWEAPON~ ~w~to select.");
+	TextDrawUseBox(txtClassSelHelper, 1);
+	TextDrawBoxColor(txtClassSelHelper,0x222222BB);
+	TextDrawLetterSize(txtClassSelHelper,0.3,1.0);
+	TextDrawTextSize(txtClassSelHelper,400.0,40.0);
+	TextDrawFont(txtClassSelHelper, 2);
+	TextDrawSetShadow(txtClassSelHelper,0);
+    TextDrawSetOutline(txtClassSelHelper,1);
+    TextDrawBackgroundColor(txtClassSelHelper,0x000000FF);
+    TextDrawColor(txtClassSelHelper,0xFFFFFFFF);
+}
+
+//----------------------------------------------------------
+
+ClassSel_SetupSelectedCity(playerid)
+{
+	if(gPlayerCitySelection[playerid] == -1) {
+		gPlayerCitySelection[playerid] = CITY_LOS_SANTOS;
+	}
+	
+	if(gPlayerCitySelection[playerid] == CITY_LOS_SANTOS) {
+		SetPlayerInterior(playerid,0);
+   		SetPlayerCameraPos(playerid,1630.6136,-2286.0298,110.0);
+		SetPlayerCameraLookAt(playerid,1887.6034,-1682.1442,47.6167);
+		
+		TextDrawShowForPlayer(playerid,txtLosSantos);
+		TextDrawHideForPlayer(playerid,txtSanFierro);
+		TextDrawHideForPlayer(playerid,txtLasVenturas);
+	}
+	else if(gPlayerCitySelection[playerid] == CITY_SAN_FIERRO) {
+		SetPlayerInterior(playerid,0);
+   		SetPlayerCameraPos(playerid,-1300.8754,68.0546,129.4823);
+		SetPlayerCameraLookAt(playerid,-1817.9412,769.3878,132.6589);
+		
+		TextDrawHideForPlayer(playerid,txtLosSantos);
+		TextDrawShowForPlayer(playerid,txtSanFierro);
+		TextDrawHideForPlayer(playerid,txtLasVenturas);
+	}
+	else if(gPlayerCitySelection[playerid] == CITY_LAS_VENTURAS) {
+		SetPlayerInterior(playerid,0);
+   		SetPlayerCameraPos(playerid,1310.6155,1675.9182,110.7390);
+		SetPlayerCameraLookAt(playerid,2285.2944,1919.3756,68.2275);
+		
+		TextDrawHideForPlayer(playerid,txtLosSantos);
+		TextDrawHideForPlayer(playerid,txtSanFierro);
+		TextDrawShowForPlayer(playerid,txtLasVenturas);
+	}
+}
+
+//----------------------------------------------------------
+
+ClassSel_SwitchToNextCity(playerid)
+{
+    gPlayerCitySelection[playerid]++;
+	if(gPlayerCitySelection[playerid] > CITY_LAS_VENTURAS) {
+	    gPlayerCitySelection[playerid] = CITY_LOS_SANTOS;
+	}
+	PlayerPlaySound(playerid,1052,0.0,0.0,0.0);
+	gPlayerLastCitySelectionTick[playerid] = GetTickCount();
+	ClassSel_SetupSelectedCity(playerid);
+}
+
+//----------------------------------------------------------
+
+ClassSel_SwitchToPreviousCity(playerid)
+{
+    gPlayerCitySelection[playerid]--;
+	if(gPlayerCitySelection[playerid] < CITY_LOS_SANTOS) {
+	    gPlayerCitySelection[playerid] = CITY_LAS_VENTURAS;
+	}
+	PlayerPlaySound(playerid,1053,0.0,0.0,0.0);
+	gPlayerLastCitySelectionTick[playerid] = GetTickCount();
+	ClassSel_SetupSelectedCity(playerid);
+}
+
+//----------------------------------------------------------
+
+ClassSel_HandleCitySelection(playerid)
+{
+	new Keys,ud,lr;
+    GetPlayerKeys(playerid,Keys,ud,lr);
+    
+    if(gPlayerCitySelection[playerid] == -1) {
+		ClassSel_SwitchToNextCity(playerid);
+		return;
+	}
+
+	// only allow new selection every ~500 ms
+	if( (GetTickCount() - gPlayerLastCitySelectionTick[playerid]) < 500 ) return;
+	
+	if(Keys & KEY_FIRE) {
+	    gPlayerHasCitySelected[playerid] = 1;
+	    TextDrawHideForPlayer(playerid,txtClassSelHelper);
+		TextDrawHideForPlayer(playerid,txtLosSantos);
+		TextDrawHideForPlayer(playerid,txtSanFierro);
+		TextDrawHideForPlayer(playerid,txtLasVenturas);
+	    TogglePlayerSpectating(playerid,0);
+	    return;
+	}
+	
+	if(lr > 0) {
+	   ClassSel_SwitchToNextCity(playerid);
+	}
+	else if(lr < 0) {
+	   ClassSel_SwitchToPreviousCity(playerid);
+	}
+}
+
 //------------------------------------------------------------------------------------------------------
 
 public OnPlayerRequestSpawn(playerid)
@@ -111,59 +255,51 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	//SendClientMessage(playerid,0xFFFFFFFF,s);
 }
 
-//------------------------------------------------------------------------------------------------------
-
-public MoneyGrubScoreUpdate()
-{
-	new CashScore;
-	new name[MAX_PLAYER_NAME];
-	//new string[256];
-	for(new i=0; i<MAX_PLAYERS; i++)
-	{
-		if (IsPlayerConnected(i))
-		{
-			GetPlayerName(i, name, sizeof(name));
-   			CashScore = GetPlayerMoney(i);
-			SetPlayerScore(i, CashScore);
-			if (CashScore > CashScoreOld)
-			{
-				CashScoreOld = CashScore;
-				//format(string, sizeof(string), "$$$ %s is now in the lead $$$", name);
-				//SendClientMessageToAll(COLOR_YELLOW, string);
-			}
-		}
-	}
-}
-
-//------------------------------------------------------------------------------------------------------
-
-/*public GrubModeReset()
-{
-	for(new i=0; i<MAX_PLAYERS; i++)
-	{
-		if (IsPlayerConnected(i))
-		{
-			SetPlayerScore(i, PocketMoney);
-			SetPlayerRandomSpawn(i, classid);
-		}
-	}
-
-}*/
-
-//------------------------------------------------------------------------------------------------------
-
 public OnPlayerConnect(playerid)
 {
+	new filename[128];
+	new File:file_stats;
+	GetPlayerName(playerid, playerName[playerid], 24);
+	format(filename,sizeof(filename),"stats/%s.txt", playerName[playerid]);
+    if(!fexist(filename))
+    {
+        file_stats = fopen(filename,filemode:io_append);
+		GivePlayerMoney(playerid, PocketMoney);
+	    fclose(file_stats);
+    }
+	else
+	{
+		new player_cash[128];
+		file_stats = fopen(filename,filemode:io_read);
+		fread(file_stats, player_cash);
+		GivePlayerMoney(playerid, strval(player_cash));
+		fclose(file_stats);
+	}
+
 	GameTextForPlayer(playerid,"~w~SA-MP: ~r~SA:MP ~g~Light Bullet Server",5000,5);
 	SendPlayerFormattedText(playerid, "Welcome to SA:MP Light Bullet Server, For help type /help.", 0);
+
+	gPlayerCitySelection[playerid] = -1;
+	gPlayerHasCitySelected[playerid] = 0;
+	gPlayerLastCitySelectionTick[playerid] = GetTickCount();
+
 	gActivePlayers[playerid]++;
 	gLastGaveCash[playerid] = GetTickCount();
+	
 	return 1;
 }
 
 //------------------------------------------------------------------------------------------------------
 public OnPlayerDisconnect(playerid)
 {
+	new filename[128];
+	new tmp[128];
+	new File:file_stats;
+	format(filename,sizeof(filename),"stats/%s.txt", playerName[playerid]);
+	file_stats = fopen(filename,filemode:io_write);
+	format(tmp,sizeof(tmp),"%d", GetPlayerMoney(playerid));
+	fwrite(file_stats, tmp);
+	fclose(file_stats);
 	gActivePlayers[playerid]--;
 }
 //------------------------------------------------------------------------------------------------------
@@ -184,7 +320,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendPlayerFormattedText(playerid,"Type: /objective : to find out what to do in this gamemode.",0);
 		SendPlayerFormattedText(playerid,"Type: /givecash [playerid] [money-amount] to send money to other players.",0);
 		SendPlayerFormattedText(playerid,"Type: /tips : to see some tips from the creator of the gamemode.", 0);
-    return 1;
+    	return 1;
 	}
 	if(strcmp(cmd, "/objective", true) == 0) {
 		SendPlayerFormattedText(playerid,"This gamemode is faily open, there's no specific win / endgame conditions to meet.",0);
@@ -192,16 +328,15 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendPlayerFormattedText(playerid,"Consequently, if you have lots of money, and you die, your killer gets your cash.",0);
 		SendPlayerFormattedText(playerid,"However, you're not forced to kill players for money, you can always gamble in the", 0);
 		SendPlayerFormattedText(playerid,"Casino's.", 0);
-    return 1;
+    	return 1;
 	}
 	if(strcmp(cmd, "/tips", true) == 0) {
 		SendPlayerFormattedText(playerid,"Spawning with just a desert eagle might sound lame, however the idea of this",0);
 		SendPlayerFormattedText(playerid,"gamemode is to get some cash, get better guns, then go after whoever has the",0);
 		SendPlayerFormattedText(playerid,"most cash. Once you've got the most cash, the idea is to stay alive(with the",0);
 		SendPlayerFormattedText(playerid,"cash intact)until the game ends, simple right?", 0);
-    return 1;
+    	return 1;
 	}
-	
  	if(strcmp(cmd, "/givecash", true) == 0) {
 	    new tmp[256];
 		tmp = strtok(cmdtext, idx);
@@ -245,9 +380,8 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			}
 		return 1;
 	}
-	
+
 	// PROCESS OTHER COMMANDS
-	
 	
 	return 0;
 }
@@ -256,28 +390,45 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 public OnPlayerSpawn(playerid)
 {
-	GivePlayerMoney(playerid, PocketMoney);
+	new randSpawn = 0;
+
+	//GivePlayerMoney(playerid, PocketMoney);
 	SetPlayerInterior(playerid,0);
-	SetPlayerRandomSpawn(playerid);
 	TogglePlayerClock(playerid,1);
+
+	gPlayerHasCitySelected[playerid] = 0;
+
+	if(CITY_LOS_SANTOS == gPlayerCitySelection[playerid]) {
+ 	    randSpawn = random(sizeof(gRandomSpawns_LosSantos));
+ 	    SetPlayerPos(playerid,
+		 gRandomSpawns_LosSantos[randSpawn][0],
+		 gRandomSpawns_LosSantos[randSpawn][1],
+		 gRandomSpawns_LosSantos[randSpawn][2]);
+		SetPlayerFacingAngle(playerid,gRandomSpawns_LosSantos[randSpawn][3]);
+	}
+	else if(CITY_SAN_FIERRO == gPlayerCitySelection[playerid]) {
+ 	    randSpawn = random(sizeof(gRandomSpawns_SanFierro));
+ 	    SetPlayerPos(playerid,
+		 gRandomSpawns_SanFierro[randSpawn][0],
+		 gRandomSpawns_SanFierro[randSpawn][1],
+		 gRandomSpawns_SanFierro[randSpawn][2]);
+		SetPlayerFacingAngle(playerid,gRandomSpawns_SanFierro[randSpawn][3]);
+	}
+	else if(CITY_LAS_VENTURAS == gPlayerCitySelection[playerid]) {
+ 	    randSpawn = random(sizeof(gRandomSpawns_LasVenturas));
+ 	    SetPlayerPos(playerid,
+		 gRandomSpawns_LasVenturas[randSpawn][0],
+		 gRandomSpawns_LasVenturas[randSpawn][1],
+		 gRandomSpawns_LasVenturas[randSpawn][2]);
+		SetPlayerFacingAngle(playerid,gRandomSpawns_LasVenturas[randSpawn][3]);
+	}
+
+	GivePlayerWeapon(playerid,WEAPON_COLT45,100);
+
 	return 1;
 }
 
-public SetPlayerRandomSpawn(playerid)
-{
-	if (iSpawnSet[playerid] == 1)
-	{
-		new rand = random(sizeof(gCopPlayerSpawns));
-		SetPlayerPos(playerid, gCopPlayerSpawns[rand][0], gCopPlayerSpawns[rand][1], gCopPlayerSpawns[rand][2]); // Warp the player
-		SetPlayerFacingAngle(playerid, 270.0);
-    }
-    else if (iSpawnSet[playerid] == 0)
-    {
-		new rand = random(sizeof(gRandomPlayerSpawns));
-		SetPlayerPos(playerid, gRandomPlayerSpawns[rand][0], gRandomPlayerSpawns[rand][1], gRandomPlayerSpawns[rand][2]); // Warp the player
-	}
-	return 1;
-}
+
 
 //------------------------------------------------------------------------------------------------------
 
@@ -286,77 +437,44 @@ public OnPlayerDeath(playerid, killerid, reason)
     new playercash;
 	if(killerid == INVALID_PLAYER_ID) {
         SendDeathMessage(INVALID_PLAYER_ID,playerid,reason);
-        ResetPlayerMoney(playerid);
-	} else {
-	    	SendDeathMessage(killerid,playerid,reason);
-			SetPlayerScore(killerid,GetPlayerScore(killerid)+1);
-			playercash = GetPlayerMoney(playerid);
-			if (playercash > 0)  {
-				GivePlayerMoney(killerid, playercash);
+        //ResetPlayerMoney(playerid);
+	}
+	else
+	{
+		SendDeathMessage(killerid,playerid,reason);
+		SetPlayerScore(killerid,GetPlayerScore(killerid)+1);
+		playercash = GetPlayerMoney(playerid);
+		GivePlayerMoney(killerid, KILLPRICE);
+		if (playercash > 0)  {
+			if (playercash > KILLPRICE)
+			{
+				playercash -= KILLPRICE;
 				ResetPlayerMoney(playerid);
+				GivePlayerMoney(playerid, playercash);
 			}
 			else
-			{
-			}
-     	}
+				ResetPlayerMoney(playerid);
+		}
+	}
  	return 1;
 }
-
-/* public OnPlayerDeath(playerid, killerid, reason)
-{   haxed by teh mike
-	new name[MAX_PLAYER_NAME];
-	new string[256];
-	new deathreason[20];
-	new playercash;
-	GetPlayerName(playerid, name, sizeof(name));
-	GetWeaponName(reason, deathreason, 20);
-	if (killerid == INVALID_PLAYER_ID) {
-	    switch (reason) {
-			case WEAPON_DROWN:
-			{
-                format(string, sizeof(string), "*** %s drowned.)", name);
-			}
-			default:
-			{
-			    if (strlen(deathreason) > 0) {
-					format(string, sizeof(string), "*** %s died. (%s)", name, deathreason);
-				} else {
-				    format(string, sizeof(string), "*** %s died.", name);
-				}
-			}
-		}
-	}
-	else {
-	new killer[MAX_PLAYER_NAME];
-	GetPlayerName(killerid, killer, sizeof(killer));
-	if (strlen(deathreason) > 0) {
-		format(string, sizeof(string), "*** %s killed %s. (%s)", killer, name, deathreason);
-		} else {
-				format(string, sizeof(string), "*** %s killed %s.", killer, name);
-			}
-		}
-	SendClientMessageToAll(COLOR_RED, string);
-		{
-		playercash = GetPlayerMoney(playerid);
-		if (playercash > 0)
-		{
-			GivePlayerMoney(killerid, playercash);
-			ResetPlayerMoney(playerid);
-		}
-		else
-		{
-		}
-	}
- 	return 1;
-}*/
 
 //------------------------------------------------------------------------------------------------------
 
 public OnPlayerRequestClass(playerid, classid)
 {
-	iSpawnSet[playerid] = 0;
-	SetupPlayerForClassSelection(playerid);
-	return 1;
+	if(gPlayerHasCitySelected[playerid]) {
+		ClassSel_SetupCharSelection(playerid);
+		return 1;
+	} else {
+		if(GetPlayerState(playerid) != PLAYER_STATE_SPECTATING) {
+			TogglePlayerSpectating(playerid,1);
+    		TextDrawShowForPlayer(playerid, txtClassSelHelper);
+    		gPlayerCitySelection[playerid] = -1;
+		}
+  	}
+    
+	return 0;
 }
 
 public SetupPlayerForClassSelection(playerid)
@@ -375,35 +493,101 @@ public GameModeExitFunc()
 
 public OnGameModeInit()
 {
-	SetGameModeText("Light Bullet's DM~MG");
+	SetGameModeText("Light Bullet's SA:MP server");
 
-	ShowPlayerMarkers(1);
+	ShowPlayerMarkers(0);
 	ShowNameTags(1);
-	EnableStuntBonusForAll(0);
+	EnableStuntBonusForAll(1);
+
+	ClassSel_InitTextDraws();
 
 	//Classes
-	total_classes_from_files += LoadClassesFromFile("classes/unique.txt");
-	total_classes_from_files += LoadClassesFromFile("classes/cops.txt");
-	total_classes_from_files += LoadClassesFromFile("classes/civil.txt");
-	total_classes_from_files += LoadClassesFromFile("classes/workers.txt");
-	total_classes_from_files += LoadClassesFromFile("classes/characters.txt");
+
+	//From LVDM
+	//total_classes_from_files += LoadClassesFromFile("classes/lvdm/unique.txt");
+	//total_classes_from_files += LoadClassesFromFile("classes/lvdm/cops.txt");
+	//total_classes_from_files += LoadClassesFromFile("classes/lvdm/civil.txt");
+	//total_classes_from_files += LoadClassesFromFile("classes/lvdm/workers.txt");
+	//total_classes_from_files += LoadClassesFromFile("classes/lvdm/characters.txt");
+
+	//From Grand Larceny
+	total_classes_from_files += LoadClassesFromFile("classes/gl/main.txt");
+
 	printf("Total classes from files: %d",total_classes_from_files);
 
 	//Vehicles
-	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/car_spawns.txt");
-	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/13_additions.txt");
-	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/uber_haxed.txt");
-	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/uncommented.txt");
-	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/22_4_update.txt");
-	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/25_4_update.txt");
+
+	//From LVDM
+	//total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lvdm/car_spawns.txt");
+	//total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lvdm/13_additions.txt");
+	//total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lvdm/uber_haxed.txt");
+	//total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lvdm/uncommented.txt");
+	//total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lvdm/22_4_update.txt");
+	//total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lvdm/25_4_update.txt");
+	
+	//From Grand Larceny
+	// SPECIAL
+	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/trains.txt");
+	total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/pilots.txt");
+   	// LAS VENTURAS
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/lv_law.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/lv_airport.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/lv_gen.txt");
+    // SAN FIERRO
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/sf_law.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/sf_airport.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/sf_gen.txt");
+    // LOS SANTOS
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/ls_law.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/ls_airport.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/ls_gen_inner.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/ls_gen_outer.txt");
+    // OTHER AREAS
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/whetstone.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/bone.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/flint.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/tierra.txt");
+    total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/gl/red_county.txt");
 	printf("Total vehicles from files: %d",total_vehicles_from_files);
 
 	//Pickups
 	total_pickups_from_files += LoadStaticPickupsFromFile("pickups/25_4_update.txt");
 	printf("Total pickups from files: %d",total_pickups_from_files);
 
-	SetTimer("MoneyGrubScoreUpdate", 1000, 1);
+	//SetTimer("MoneyGrubScoreUpdate", 1000, 1);
 	//SetTimer("GameModeExitFunc", gRoundTime, 0);
+
+	return 1;
+}
+
+public OnPlayerUpdate(playerid)
+{
+	if(!IsPlayerConnected(playerid)) return 0;
+	
+	// changing cities by inputs
+	if( !gPlayerHasCitySelected[playerid] &&
+	    GetPlayerState(playerid) == PLAYER_STATE_SPECTATING ) {
+	    ClassSel_HandleCitySelection(playerid);
+	    return 1;
+	}
+	
+	// No weapons in interiors
+	//if(GetPlayerInterior(playerid) != 0 && GetPlayerWeapon(playerid) != 0) {
+	//    //SetPlayerArmedWeapon(playerid,0); // fists
+	//    return 0; // no syncing until they change their weapon
+	//}
+	
+	// Don't allow minigun
+	if(GetPlayerWeapon(playerid) == WEAPON_MINIGUN) {
+	    Kick(playerid);
+	    return 0;
+	}
+	
+	// No jetpacks allowed
+	if(GetPlayerSpecialAction(playerid) == SPECIAL_ACTION_USEJETPACK) {
+	    Kick(playerid);
+	    return 0;
+	}
 
 	return 1;
 }

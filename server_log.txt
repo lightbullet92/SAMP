@@ -1,0 +1,855 @@
+[18:53:51] [connection] incoming connection: 192.168.3.100:62236 id: 0
+[18:53:51] [join] Rivero has joined the server (0:192.168.3.100)
+[18:55:04] Position test saved to custom/saved.txt
+[18:58:11] Position deliverystart saved to custom/saved.txt
+[19:01:41] Position deliverystart saved to custom/saved.txt
+[19:04:06] Position deliverygoal saved to custom/saved.txt
+[19:06:01] Position deliverygoal saved to custom/saved.txt
+[19:06:57] Position deliverystart saved to custom/saved.txt
+[19:11:31] Position deliveryfinish saved to custom/saved.txt
+[19:17:20] [death] Rivero died 54
+[19:22:12] Position deliverystart saved to custom/saved.txt
+[19:22:40] Position deliverygoal saved to custom/saved.txt
+[19:23:43] Position deliverygoal saved to custom/saved.txt
+[19:24:22] [part] Rivero has left the server (0:1)
+[19:24:54] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:20:41] 
+[20:20:41] Server Plugins
+[20:20:41] --------------
+[20:20:41]  Loaded 0 plugins.
+
+[20:20:41] 
+[20:20:41] Filterscripts
+[20:20:41] ---------------
+[20:20:41]   Loading filterscript 'lb_savepos.amx'...
+[20:20:41]   Loaded 1 filterscripts.
+
+[20:20:41] Loaded 7 classes from: classes/unique.txt
+[20:20:41] Loaded 8 classes from: classes/cops.txt
+[20:20:41] Loaded 14 classes from: classes/civil.txt
+[20:20:41] Loaded 199 classes from: classes/workers.txt
+[20:20:41] Loaded 12 classes from: classes/characters.txt
+[20:20:41] Total classes from files: 240
+[20:20:41] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[20:20:41] Loaded 4 vehicles from: vehicles/13_additions.txt
+[20:20:41] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[20:20:41] Loaded 35 vehicles from: vehicles/uncommented.txt
+[20:20:41] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[20:20:41] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[20:20:41] Total vehicles from files: 233
+[20:20:41] Loaded 5 pickups from: pickups/25_4_update.txt
+[20:20:41] Total pickups from files: 5
+[20:20:41] 
+----------------------------------
+[20:20:41]   Running SA:MP ~Light Bullet Server
+
+[20:20:41]              Coded By
+[20:20:41]          Light Bullet team
+[20:20:41] ----------------------------------
+
+[20:20:41] Number of vehicle models: 64
+[20:22:02] [connection] incoming connection: 192.168.3.100:53418 id: 0
+[20:22:02] [join] Rivero has joined the server (0:192.168.3.100)
+[20:23:34] Position 123 saved to positions/ |ÿ4êÏH§
+[20:23:56] [part] Rivero has left the server (0:1)
+[20:24:37] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:26:41] 
+[20:26:41] Server Plugins
+[20:26:41] --------------
+[20:26:41]  Loaded 0 plugins.
+
+[20:26:41] 
+[20:26:41] Filterscripts
+[20:26:41] ---------------
+[20:26:41]   Loading filterscript 'lb_savepos.amx'...
+[20:26:41]   Loaded 1 filterscripts.
+
+[20:26:41] Loaded 7 classes from: classes/unique.txt
+[20:26:41] Loaded 8 classes from: classes/cops.txt
+[20:26:41] Loaded 14 classes from: classes/civil.txt
+[20:26:41] Loaded 199 classes from: classes/workers.txt
+[20:26:41] Loaded 12 classes from: classes/characters.txt
+[20:26:41] Total classes from files: 240
+[20:26:41] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[20:26:41] Loaded 4 vehicles from: vehicles/13_additions.txt
+[20:26:41] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[20:26:41] Loaded 35 vehicles from: vehicles/uncommented.txt
+[20:26:41] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[20:26:41] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[20:26:41] Total vehicles from files: 233
+[20:26:41] Loaded 5 pickups from: pickups/25_4_update.txt
+[20:26:41] Total pickups from files: 5
+[20:26:41] 
+----------------------------------
+[20:26:41]   Running SA:MP ~Light Bullet Server
+
+[20:26:41]              Coded By
+[20:26:41]          Light Bullet team
+[20:26:41] ----------------------------------
+
+[20:26:41] Number of vehicle models: 64
+[20:29:01] [connection] incoming connection: 192.168.3.100:57128 id: 0
+[20:29:01] [join] Rivero has joined the server (0:192.168.3.100)
+[20:32:14] Position test saved to positions/Rivero.txt
+[20:32:20] [part] Rivero has left the server (0:1)
+[20:32:58] [connection] incoming connection: 192.168.3.100:58279 id: 0
+[20:32:58] [join] Rivero has joined the server (0:192.168.3.100)
+[20:33:36] [part] Rivero has left the server (0:1)
+[20:35:18] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:53:43] 
+[20:53:43] Server Plugins
+[20:53:43] --------------
+[20:53:43]  Loaded 0 plugins.
+
+[20:53:43] 
+[20:53:43] Filterscripts
+[20:53:43] ---------------
+[20:53:43]   Loading filterscript 'lb_savepos.amx'...
+[20:53:43]   Loaded 1 filterscripts.
+
+[20:53:43] Loaded 7 classes from: classes/unique.txt
+[20:53:43] Loaded 8 classes from: classes/cops.txt
+[20:53:43] Loaded 14 classes from: classes/civil.txt
+[20:53:43] Loaded 199 classes from: classes/workers.txt
+[20:53:43] Loaded 12 classes from: classes/characters.txt
+[20:53:43] Total classes from files: 240
+[20:53:43] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[20:53:43] Loaded 4 vehicles from: vehicles/13_additions.txt
+[20:53:43] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[20:53:43] Loaded 35 vehicles from: vehicles/uncommented.txt
+[20:53:43] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[20:53:43] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[20:53:43] Total vehicles from files: 233
+[20:53:43] Loaded 5 pickups from: pickups/25_4_update.txt
+[20:53:43] Total pickups from files: 5
+[20:53:43] 
+----------------------------------
+[20:53:43]   Running SA:MP ~Light Bullet Server
+
+[20:53:43]              Coded By
+[20:53:43]          Light Bullet team
+[20:53:43] ----------------------------------
+
+[20:53:43] Number of vehicle models: 64
+[20:56:35] [connection] incoming connection: 192.168.3.100:53639 id: 0
+[20:56:36] [join] Rivero has joined the server (0:192.168.3.100)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:57:10] 
+[20:57:10] Server Plugins
+[20:57:10] --------------
+[20:57:10]  Loaded 0 plugins.
+
+[20:57:10] 
+[20:57:10] Filterscripts
+[20:57:10] ---------------
+[20:57:10]   Loading filterscript 'lb_savepos.amx'...
+[20:57:10]   Loaded 1 filterscripts.
+
+[20:57:10] Loaded 7 classes from: classes/unique.txt
+[20:57:10] Loaded 8 classes from: classes/cops.txt
+[20:57:10] Loaded 14 classes from: classes/civil.txt
+[20:57:10] Loaded 199 classes from: classes/workers.txt
+[20:57:10] Loaded 12 classes from: classes/characters.txt
+[20:57:10] Total classes from files: 240
+[20:57:10] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[20:57:10] Loaded 4 vehicles from: vehicles/13_additions.txt
+[20:57:10] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[20:57:10] Loaded 35 vehicles from: vehicles/uncommented.txt
+[20:57:10] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[20:57:10] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[20:57:10] Total vehicles from files: 233
+[20:57:10] Loaded 5 pickups from: pickups/25_4_update.txt
+[20:57:10] Total pickups from files: 5
+[20:57:10] 
+----------------------------------
+[20:57:10]   Running SA:MP ~Light Bullet Server
+
+[20:57:10]              Coded By
+[20:57:10]          Light Bullet team
+[20:57:10] ----------------------------------
+
+[20:57:10] Number of vehicle models: 64
+[20:57:41] [connection] incoming connection: 192.168.3.100:52879 id: 0
+[20:57:41] [join] Rivero has joined the server (0:192.168.3.100)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[20:58:55] 
+[20:58:55] Server Plugins
+[20:58:55] --------------
+[20:58:55]  Loaded 0 plugins.
+
+[20:58:55] 
+[20:58:55] Filterscripts
+[20:58:55] ---------------
+[20:58:55]   Loading filterscript 'lb_savepos.amx'...
+[20:58:55]   Loaded 1 filterscripts.
+
+[20:58:55] Loaded 7 classes from: classes/unique.txt
+[20:58:55] Loaded 8 classes from: classes/cops.txt
+[20:58:55] Loaded 14 classes from: classes/civil.txt
+[20:58:55] Loaded 199 classes from: classes/workers.txt
+[20:58:55] Loaded 12 classes from: classes/characters.txt
+[20:58:55] Total classes from files: 240
+[20:58:55] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[20:58:55] Loaded 4 vehicles from: vehicles/13_additions.txt
+[20:58:55] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[20:58:55] Loaded 35 vehicles from: vehicles/uncommented.txt
+[20:58:55] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[20:58:55] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[20:58:55] Total vehicles from files: 233
+[20:58:55] Loaded 5 pickups from: pickups/25_4_update.txt
+[20:58:55] Total pickups from files: 5
+[20:58:55] 
+----------------------------------
+[20:58:55]   Running SA:MP ~Light Bullet Server
+
+[20:58:55]              Coded By
+[20:58:55]          Light Bullet team
+[20:58:55] ----------------------------------
+
+[20:58:55] Number of vehicle models: 64
+[20:59:25] [connection] incoming connection: 192.168.3.100:61852 id: 0
+[20:59:25] [join] Rivero has joined the server (0:192.168.3.100)
+[21:02:00] Position 123 saved to positions/Rivero.txt
+[21:02:14] [part] Rivero has left the server (0:1)
+[21:02:19] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:20:03] 
+[21:20:03] Server Plugins
+[21:20:03] --------------
+[21:20:03]  Loaded 0 plugins.
+
+[21:20:03] 
+[21:20:03] Filterscripts
+[21:20:03] ---------------
+[21:20:03]   Loading filterscript 'lb_savepos.amx'...
+[21:20:03]   Loaded 1 filterscripts.
+
+[21:20:03] Loaded 7 classes from: classes/unique.txt
+[21:20:03] Loaded 8 classes from: classes/cops.txt
+[21:20:03] Loaded 14 classes from: classes/civil.txt
+[21:20:03] Loaded 199 classes from: classes/workers.txt
+[21:20:03] Loaded 12 classes from: classes/characters.txt
+[21:20:03] Total classes from files: 240
+[21:20:03] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[21:20:03] Loaded 4 vehicles from: vehicles/13_additions.txt
+[21:20:03] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[21:20:03] Loaded 35 vehicles from: vehicles/uncommented.txt
+[21:20:03] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[21:20:03] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[21:20:03] Total vehicles from files: 233
+[21:20:03] Loaded 5 pickups from: pickups/25_4_update.txt
+[21:20:03] Total pickups from files: 5
+[21:20:03] 
+----------------------------------
+[21:20:03]   Running SA:MP ~Light Bullet Server
+
+[21:20:03]              Coded By
+[21:20:03]          Light Bullet team
+[21:20:03] ----------------------------------
+
+[21:20:03] Number of vehicle models: 64
+[21:20:44] [connection] incoming connection: 192.168.3.100:60885 id: 0
+[21:20:44] [join] Rivero has joined the server (0:192.168.3.100)
+[21:21:19] Position testmapicon saved to positions/Rivero.txt
+[21:21:53] [part] Rivero has left the server (0:1)
+[21:22:04] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:26:26] 
+[21:26:26] Server Plugins
+[21:26:26] --------------
+[21:26:26]  Loaded 0 plugins.
+
+[21:26:26] 
+[21:26:26] Filterscripts
+[21:26:26] ---------------
+[21:26:26]   Loading filterscript 'lb_savepos.amx'...
+[21:26:26]   Loaded 1 filterscripts.
+
+[21:26:26] Loaded 7 classes from: classes/unique.txt
+[21:26:26] Loaded 8 classes from: classes/cops.txt
+[21:26:26] Loaded 14 classes from: classes/civil.txt
+[21:26:26] Loaded 199 classes from: classes/workers.txt
+[21:26:26] Loaded 12 classes from: classes/characters.txt
+[21:26:26] Total classes from files: 240
+[21:26:26] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[21:26:26] Loaded 4 vehicles from: vehicles/13_additions.txt
+[21:26:26] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[21:26:26] Loaded 35 vehicles from: vehicles/uncommented.txt
+[21:26:26] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[21:26:26] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[21:26:26] Total vehicles from files: 233
+[21:26:26] Loaded 5 pickups from: pickups/25_4_update.txt
+[21:26:26] Total pickups from files: 5
+[21:26:26] 
+----------------------------------
+[21:26:26]   Running SA:MP ~Light Bullet Server
+
+[21:26:26]              Coded By
+[21:26:26]          Light Bullet team
+[21:26:26] ----------------------------------
+
+[21:26:26] Number of vehicle models: 64
+[21:26:57] [connection] incoming connection: 192.168.3.100:64579 id: 0
+[21:26:57] [join] Rivero has joined the server (0:192.168.3.100)
+[21:27:17] Position testmapicon saved to positions/Rivero.txt
+[21:28:40] Position testmapicon saved to positions/Rivero.txt
+[21:29:13] [part] Rivero has left the server (0:1)
+[21:29:21] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:41:01] 
+[21:41:01] Server Plugins
+[21:41:01] --------------
+[21:41:01]  Loaded 0 plugins.
+
+[21:41:01] 
+[21:41:01] Filterscripts
+[21:41:01] ---------------
+[21:41:01]   Loading filterscript 'lb_savepos.amx'...
+[21:41:01]   Loaded 1 filterscripts.
+
+[21:41:01] Loaded 7 classes from: classes/unique.txt
+[21:41:01] Loaded 8 classes from: classes/cops.txt
+[21:41:01] Loaded 14 classes from: classes/civil.txt
+[21:41:01] Loaded 199 classes from: classes/workers.txt
+[21:41:01] Loaded 12 classes from: classes/characters.txt
+[21:41:01] Total classes from files: 240
+[21:41:01] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[21:41:01] Loaded 4 vehicles from: vehicles/13_additions.txt
+[21:41:01] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[21:41:01] Loaded 35 vehicles from: vehicles/uncommented.txt
+[21:41:01] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[21:41:01] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[21:41:01] Total vehicles from files: 233
+[21:41:01] Loaded 5 pickups from: pickups/25_4_update.txt
+[21:41:01] Total pickups from files: 5
+[21:41:01] 
+----------------------------------
+[21:41:01]   Running SA:MP ~Light Bullet Server
+
+[21:41:01]              Coded By
+[21:41:01]          Light Bullet team
+[21:41:01] ----------------------------------
+
+[21:41:01] Number of vehicle models: 64
+[21:41:32] [connection] incoming connection: 192.168.3.100:58263 id: 0
+[21:41:33] [join] Rivero has joined the server (0:192.168.3.100)
+[21:41:54] Position 1 saved to positions/Rivero.txt
+[21:43:15] Position 1 saved to positions/Rivero.txt
+[21:43:17] [part] Rivero has left the server (0:1)
+[21:43:19] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:44:24] 
+[21:44:24] Server Plugins
+[21:44:24] --------------
+[21:44:24]  Loaded 0 plugins.
+
+[21:44:24] 
+[21:44:24] Filterscripts
+[21:44:24] ---------------
+[21:44:24]   Loading filterscript 'lb_savepos.amx'...
+[21:44:24]   Loaded 1 filterscripts.
+
+[21:44:24] Loaded 7 classes from: classes/unique.txt
+[21:44:24] Loaded 8 classes from: classes/cops.txt
+[21:44:24] Loaded 14 classes from: classes/civil.txt
+[21:44:24] Loaded 199 classes from: classes/workers.txt
+[21:44:24] Loaded 12 classes from: classes/characters.txt
+[21:44:24] Total classes from files: 240
+[21:44:24] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[21:44:24] Loaded 4 vehicles from: vehicles/13_additions.txt
+[21:44:24] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[21:44:24] Loaded 35 vehicles from: vehicles/uncommented.txt
+[21:44:24] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[21:44:24] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[21:44:24] Total vehicles from files: 233
+[21:44:24] Loaded 5 pickups from: pickups/25_4_update.txt
+[21:44:24] Total pickups from files: 5
+[21:44:24] 
+----------------------------------
+[21:44:24]   Running SA:MP ~Light Bullet Server
+
+[21:44:24]              Coded By
+[21:44:24]          Light Bullet team
+[21:44:24] ----------------------------------
+
+[21:44:24] Number of vehicle models: 64
+[21:45:09] [connection] incoming connection: 192.168.3.100:55196 id: 0
+[21:45:09] [join] Rivero has joined the server (0:192.168.3.100)
+[21:45:24] Position 1 saved to positions/Rivero.txt
+[21:45:35] Position 1 saved to positions/Rivero.txt
+[21:45:52] [part] Rivero has left the server (0:1)
+[21:46:00] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:46:02] 
+[22:46:02] Server Plugins
+[22:46:02] --------------
+[22:46:02]  Loaded 0 plugins.
+
+[22:46:02] 
+[22:46:02] Filterscripts
+[22:46:02] ---------------
+[22:46:02]   Loading filterscript 'lb_savepos.amx'...
+[22:46:02]   Loading filterscript 'lb_healrepair.amx'...
+[22:46:02]   Loaded 2 filterscripts.
+
+[22:46:02] Loaded 7 classes from: classes/unique.txt
+[22:46:02] Loaded 8 classes from: classes/cops.txt
+[22:46:02] Loaded 14 classes from: classes/civil.txt
+[22:46:02] Loaded 199 classes from: classes/workers.txt
+[22:46:02] Loaded 12 classes from: classes/characters.txt
+[22:46:02] Total classes from files: 240
+[22:46:02] Loaded 102 vehicles from: vehicles/car_spawns.txt
+[22:46:02] Loaded 4 vehicles from: vehicles/13_additions.txt
+[22:46:02] Loaded 54 vehicles from: vehicles/uber_haxed.txt
+[22:46:02] Loaded 35 vehicles from: vehicles/uncommented.txt
+[22:46:02] Loaded 17 vehicles from: vehicles/22_4_update.txt
+[22:46:02] Loaded 21 vehicles from: vehicles/25_4_update.txt
+[22:46:02] Total vehicles from files: 233
+[22:46:02] Loaded 5 pickups from: pickups/25_4_update.txt
+[22:46:02] Total pickups from files: 5
+[22:46:02] 
+----------------------------------
+[22:46:02]   Running SA:MP ~Light Bullet Server
+
+[22:46:02]              Coded By
+[22:46:02]          Light Bullet team
+[22:46:02] ----------------------------------
+
+[22:46:02] Number of vehicle models: 64
+[22:47:04] [connection] incoming connection: 192.168.3.100:52557 id: 0
+[22:47:13] [join] Rivero has joined the server (0:192.168.3.100)
+[22:48:59] [death] Rivero died 255
+[22:51:50] [part] Rivero has left the server (0:1)
+[22:51:53] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:00:31] 
+[00:00:31] Server Plugins
+[00:00:31] --------------
+[00:00:31]  Loaded 0 plugins.
+
+[00:00:31] 
+[00:00:31] Filterscripts
+[00:00:31] ---------------
+[00:00:31]   Loading filterscript 'lb_savepos.amx'...
+[00:00:31]   Loading filterscript 'lb_healrepair.amx'...
+[00:00:31]   Loading filterscript 'lb_radio.amx'...
+[00:00:31]   Loaded 3 filterscripts.
+
+[00:00:31] Loaded 7 classes from: classes/unique.txt
+[00:00:31] Loaded 8 classes from: classes/cops.txt
+[00:00:31] Loaded 14 classes from: classes/civil.txt
+[00:00:31] Loaded 199 classes from: classes/workers.txt
+[00:00:31] Loaded 12 classes from: classes/characters.txt
+[00:00:31] Total classes from files: 240
+[00:00:31] Loaded 3 vehicles from: vehicles/gl/trains.txt
+[00:00:31] Loaded 3 vehicles from: vehicles/gl/pilots.txt
+[00:00:31] Loaded 15 vehicles from: vehicles/gl/lv_law.txt
+[00:00:31] Loaded 39 vehicles from: vehicles/gl/lv_airport.txt
+[00:00:31] Loaded 255 vehicles from: vehicles/gl/lv_gen.txt
+[00:00:31] Loaded 38 vehicles from: vehicles/gl/sf_law.txt
+[00:00:31] Loaded 35 vehicles from: vehicles/gl/sf_airport.txt
+[00:00:31] Loaded 353 vehicles from: vehicles/gl/sf_gen.txt
+[00:00:31] Loaded 24 vehicles from: vehicles/gl/ls_law.txt
+[00:00:31] Loaded 37 vehicles from: vehicles/gl/ls_airport.txt
+[00:00:31] Loaded 98 vehicles from: vehicles/gl/ls_gen_inner.txt
+[00:00:31] Loaded 389 vehicles from: vehicles/gl/ls_gen_outer.txt
+[00:00:31] Loaded 71 vehicles from: vehicles/gl/whetstone.txt
+[00:00:31] Loaded 168 vehicles from: vehicles/gl/bone.txt
+[00:00:31] Loaded 61 vehicles from: vehicles/gl/flint.txt
+[00:00:31] Loaded 96 vehicles from: vehicles/gl/tierra.txt
+[00:00:31] Loaded 96 vehicles from: vehicles/gl/red_county.txt
+[00:00:31] Total vehicles from files: 1781
+[00:00:31] Loaded 5 pickups from: pickups/25_4_update.txt
+[00:00:31] Total pickups from files: 5
+[00:00:31] 
+----------------------------------
+[00:00:31]   Running SA:MP ~Light Bullet Server
+
+[00:00:31]              Coded By
+[00:00:31]          Light Bullet team
+[00:00:31] ----------------------------------
+
+[00:00:31] Number of vehicle models: 173
+[00:01:04] [connection] incoming connection: 192.168.3.100:64608 id: 0
+[00:01:04] [join] Rivero has joined the server (0:192.168.3.100)
+[00:01:54] [death] Rivero died 255
+[00:02:10] [death] Rivero died 255
+[00:02:22] [death] Rivero died 255
+[00:09:56] [death] Rivero died 255
+[00:14:34] [death] Rivero died 54
+[00:29:51] [death] Rivero died 255
+[00:30:21] [part] Rivero has left the server (0:1)
+[01:00:09] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:21:27] 
+[01:21:27] Server Plugins
+[01:21:27] --------------
+[01:21:27]  Loaded 0 plugins.
+
+[01:21:27] 
+[01:21:27] Filterscripts
+[01:21:27] ---------------
+[01:21:27]   Loading filterscript 'lb_savepos.amx'...
+[01:21:27]   Loading filterscript 'lb_healrepair.amx'...
+[01:21:27]   Loading filterscript 'lb_radio.amx'...
+[01:21:27]   Loaded 3 filterscripts.
+
+[01:21:27] Loaded 45 classes from: classes/gl/main.txt
+[01:21:27] Total classes from files: 45
+[01:21:27] Loaded 3 vehicles from: vehicles/gl/trains.txt
+[01:21:27] Loaded 3 vehicles from: vehicles/gl/pilots.txt
+[01:21:27] Loaded 15 vehicles from: vehicles/gl/lv_law.txt
+[01:21:27] Loaded 39 vehicles from: vehicles/gl/lv_airport.txt
+[01:21:27] Loaded 255 vehicles from: vehicles/gl/lv_gen.txt
+[01:21:27] Loaded 38 vehicles from: vehicles/gl/sf_law.txt
+[01:21:27] Loaded 35 vehicles from: vehicles/gl/sf_airport.txt
+[01:21:27] Loaded 353 vehicles from: vehicles/gl/sf_gen.txt
+[01:21:27] Loaded 24 vehicles from: vehicles/gl/ls_law.txt
+[01:21:27] Loaded 37 vehicles from: vehicles/gl/ls_airport.txt
+[01:21:27] Loaded 98 vehicles from: vehicles/gl/ls_gen_inner.txt
+[01:21:27] Loaded 389 vehicles from: vehicles/gl/ls_gen_outer.txt
+[01:21:27] Loaded 71 vehicles from: vehicles/gl/whetstone.txt
+[01:21:27] Loaded 168 vehicles from: vehicles/gl/bone.txt
+[01:21:27] Loaded 61 vehicles from: vehicles/gl/flint.txt
+[01:21:27] Loaded 96 vehicles from: vehicles/gl/tierra.txt
+[01:21:27] Loaded 96 vehicles from: vehicles/gl/red_county.txt
+[01:21:27] Total vehicles from files: 1781
+[01:21:27] Loaded 5 pickups from: pickups/25_4_update.txt
+[01:21:27] Total pickups from files: 5
+[01:21:27] 
+----------------------------------
+[01:21:27]   Running SA:MP ~Light Bullet Server
+
+[01:21:27]              Coded By
+[01:21:27]          Light Bullet team
+[01:21:27] ----------------------------------
+
+[01:21:27] Number of vehicle models: 173
+[01:22:05] [connection] incoming connection: 192.168.3.100:61584 id: 0
+[01:22:05] [join] Rivero has joined the server (0:192.168.3.100)
+[01:23:03] [death] Rivero died 255
+[01:24:03] [part] Rivero has left the server (0:1)
+[01:24:13] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:45:10] 
+[02:45:10] Server Plugins
+[02:45:10] --------------
+[02:45:10]  Loaded 0 plugins.
+
+[02:45:10] 
+[02:45:10] Filterscripts
+[02:45:10] ---------------
+[02:45:10]   Loading filterscript 'lb_savepos.amx'...
+[02:45:10]   Loading filterscript 'lb_healrepair.amx'...
+[02:45:10]   Loading filterscript 'lb_radio.amx'...
+[02:45:10]   Loaded 3 filterscripts.
+
+[02:45:10] Loaded 45 classes from: classes/gl/main.txt
+[02:45:10] Total classes from files: 45
+[02:45:10] Loaded 3 vehicles from: vehicles/gl/trains.txt
+[02:45:10] Loaded 3 vehicles from: vehicles/gl/pilots.txt
+[02:45:10] Loaded 15 vehicles from: vehicles/gl/lv_law.txt
+[02:45:10] Loaded 39 vehicles from: vehicles/gl/lv_airport.txt
+[02:45:10] Loaded 255 vehicles from: vehicles/gl/lv_gen.txt
+[02:45:10] Loaded 38 vehicles from: vehicles/gl/sf_law.txt
+[02:45:10] Loaded 35 vehicles from: vehicles/gl/sf_airport.txt
+[02:45:10] Loaded 353 vehicles from: vehicles/gl/sf_gen.txt
+[02:45:10] Loaded 24 vehicles from: vehicles/gl/ls_law.txt
+[02:45:10] Loaded 37 vehicles from: vehicles/gl/ls_airport.txt
+[02:45:10] Loaded 98 vehicles from: vehicles/gl/ls_gen_inner.txt
+[02:45:10] Loaded 389 vehicles from: vehicles/gl/ls_gen_outer.txt
+[02:45:10] Loaded 71 vehicles from: vehicles/gl/whetstone.txt
+[02:45:10] Loaded 168 vehicles from: vehicles/gl/bone.txt
+[02:45:10] Loaded 61 vehicles from: vehicles/gl/flint.txt
+[02:45:10] Loaded 96 vehicles from: vehicles/gl/tierra.txt
+[02:45:10] Loaded 96 vehicles from: vehicles/gl/red_county.txt
+[02:45:10] Total vehicles from files: 1781
+[02:45:10] Loaded 5 pickups from: pickups/25_4_update.txt
+[02:45:10] Total pickups from files: 5
+[02:45:10] 
+----------------------------------
+[02:45:10]   Running SA:MP ~Light Bullet Server
+
+[02:45:10]              Coded By
+[02:45:10]          Light Bullet team
+[02:45:10] ----------------------------------
+
+[02:45:10] Number of vehicle models: 173
+[02:46:01] [connection] incoming connection: 192.168.3.100:55015 id: 0
+[02:46:02] [join] Rivero has joined the server (0:192.168.3.100)
+[02:46:31] [death] Rivero died 255
+[02:51:54] [death] Rivero died 255
+[02:52:02] [part] Rivero has left the server (0:1)
+[02:52:10] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:19:00] 
+[03:19:00] Server Plugins
+[03:19:00] --------------
+[03:19:00]  Loaded 0 plugins.
+
+[03:19:00] 
+[03:19:00] Filterscripts
+[03:19:00] ---------------
+[03:19:00]   Loading filterscript 'lb_savepos.amx'...
+[03:19:00]   Loading filterscript 'lb_healrepair.amx'...
+[03:19:00]   Loading filterscript 'lb_radio.amx'...
+[03:19:00]   Loaded 3 filterscripts.
+
+[03:19:00] Loaded 45 classes from: classes/gl/main.txt
+[03:19:00] Total classes from files: 45
+[03:19:00] Loaded 3 vehicles from: vehicles/gl/trains.txt
+[03:19:00] Loaded 3 vehicles from: vehicles/gl/pilots.txt
+[03:19:00] Loaded 15 vehicles from: vehicles/gl/lv_law.txt
+[03:19:00] Loaded 39 vehicles from: vehicles/gl/lv_airport.txt
+[03:19:00] Loaded 255 vehicles from: vehicles/gl/lv_gen.txt
+[03:19:00] Loaded 38 vehicles from: vehicles/gl/sf_law.txt
+[03:19:00] Loaded 35 vehicles from: vehicles/gl/sf_airport.txt
+[03:19:00] Loaded 353 vehicles from: vehicles/gl/sf_gen.txt
+[03:19:00] Loaded 24 vehicles from: vehicles/gl/ls_law.txt
+[03:19:00] Loaded 37 vehicles from: vehicles/gl/ls_airport.txt
+[03:19:00] Loaded 98 vehicles from: vehicles/gl/ls_gen_inner.txt
+[03:19:00] Loaded 389 vehicles from: vehicles/gl/ls_gen_outer.txt
+[03:19:00] Loaded 71 vehicles from: vehicles/gl/whetstone.txt
+[03:19:00] Loaded 168 vehicles from: vehicles/gl/bone.txt
+[03:19:00] Loaded 61 vehicles from: vehicles/gl/flint.txt
+[03:19:00] Loaded 96 vehicles from: vehicles/gl/tierra.txt
+[03:19:00] Loaded 96 vehicles from: vehicles/gl/red_county.txt
+[03:19:00] Total vehicles from files: 1781
+[03:19:00] Loaded 5 pickups from: pickups/25_4_update.txt
+[03:19:00] Total pickups from files: 5
+[03:19:00] 
+----------------------------------
+[03:19:00]   Running SA:MP ~Light Bullet Server
+
+[03:19:00]              Coded By
+[03:19:00]          Light Bullet team
+[03:19:00] ----------------------------------
+
+[03:19:00] Number of vehicle models: 173
+[03:19:35] [connection] incoming connection: 192.168.3.100:63850 id: 0
+[03:19:36] [join] Rivero has joined the server (0:192.168.3.100)
+[03:19:48] [death] Rivero died 255
+[03:20:05] [part] Rivero has left the server (0:1)
+[03:24:10] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:25:56] 
+[03:25:56] Server Plugins
+[03:25:56] --------------
+[03:25:56]  Loaded 0 plugins.
+
+[03:25:56] 
+[03:25:56] Filterscripts
+[03:25:56] ---------------
+[03:25:56]   Loading filterscript 'lb_savepos.amx'...
+[03:25:56]   Loading filterscript 'lb_healrepair.amx'...
+[03:25:56]   Loading filterscript 'lb_radio.amx'...
+[03:25:56]   Loaded 3 filterscripts.
+
+[03:25:56] Loaded 45 classes from: classes/gl/main.txt
+[03:25:56] Total classes from files: 45
+[03:25:56] Loaded 3 vehicles from: vehicles/gl/trains.txt
+[03:25:56] Loaded 3 vehicles from: vehicles/gl/pilots.txt
+[03:25:56] Loaded 15 vehicles from: vehicles/gl/lv_law.txt
+[03:25:56] Loaded 39 vehicles from: vehicles/gl/lv_airport.txt
+[03:25:56] Loaded 255 vehicles from: vehicles/gl/lv_gen.txt
+[03:25:56] Loaded 38 vehicles from: vehicles/gl/sf_law.txt
+[03:25:56] Loaded 35 vehicles from: vehicles/gl/sf_airport.txt
+[03:25:56] Loaded 353 vehicles from: vehicles/gl/sf_gen.txt
+[03:25:56] Loaded 24 vehicles from: vehicles/gl/ls_law.txt
+[03:25:56] Loaded 37 vehicles from: vehicles/gl/ls_airport.txt
+[03:25:56] Loaded 98 vehicles from: vehicles/gl/ls_gen_inner.txt
+[03:25:56] Loaded 389 vehicles from: vehicles/gl/ls_gen_outer.txt
+[03:25:56] Loaded 71 vehicles from: vehicles/gl/whetstone.txt
+[03:25:56] Loaded 168 vehicles from: vehicles/gl/bone.txt
+[03:25:56] Loaded 61 vehicles from: vehicles/gl/flint.txt
+[03:25:56] Loaded 96 vehicles from: vehicles/gl/tierra.txt
+[03:25:56] Loaded 96 vehicles from: vehicles/gl/red_county.txt
+[03:25:56] Total vehicles from files: 1781
+[03:25:56] Loaded 5 pickups from: pickups/25_4_update.txt
+[03:25:56] Total pickups from files: 5
+[03:25:56] 
+----------------------------------
+[03:25:56]   Running SA:MP ~Light Bullet Server
+
+[03:25:56]              Coded By
+[03:25:56]          Light Bullet team
+[03:25:56] ----------------------------------
+
+[03:25:56] Number of vehicle models: 173
+[03:29:25] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[03:41:33] 
+[03:41:33] Server Plugins
+[03:41:33] --------------
+[03:41:33]  Loaded 0 plugins.
+
+[03:41:33] 
+[03:41:33] Filterscripts
+[03:41:33] ---------------
+[03:41:33]   Loading filterscript 'lb_savepos.amx'...
+[03:41:33]   Loading filterscript 'lb_healrepair.amx'...
+[03:41:33]   Loading filterscript 'lb_radio.amx'...
+[03:41:33]   Loaded 3 filterscripts.
+
+[03:41:33] Loaded 45 classes from: classes/gl/main.txt
+[03:41:33] Total classes from files: 45
+[03:41:33] Loaded 3 vehicles from: vehicles/gl/trains.txt
+[03:41:33] Loaded 3 vehicles from: vehicles/gl/pilots.txt
+[03:41:33] Loaded 15 vehicles from: vehicles/gl/lv_law.txt
+[03:41:33] Loaded 39 vehicles from: vehicles/gl/lv_airport.txt
+[03:41:33] Loaded 255 vehicles from: vehicles/gl/lv_gen.txt
+[03:41:33] Loaded 38 vehicles from: vehicles/gl/sf_law.txt
+[03:41:33] Loaded 35 vehicles from: vehicles/gl/sf_airport.txt
+[03:41:33] Loaded 353 vehicles from: vehicles/gl/sf_gen.txt
+[03:41:33] Loaded 24 vehicles from: vehicles/gl/ls_law.txt
+[03:41:33] Loaded 37 vehicles from: vehicles/gl/ls_airport.txt
+[03:41:33] Loaded 98 vehicles from: vehicles/gl/ls_gen_inner.txt
+[03:41:33] Loaded 389 vehicles from: vehicles/gl/ls_gen_outer.txt
+[03:41:33] Loaded 71 vehicles from: vehicles/gl/whetstone.txt
+[03:41:33] Loaded 168 vehicles from: vehicles/gl/bone.txt
+[03:41:33] Loaded 61 vehicles from: vehicles/gl/flint.txt
+[03:41:33] Loaded 96 vehicles from: vehicles/gl/tierra.txt
+[03:41:33] Loaded 96 vehicles from: vehicles/gl/red_county.txt
+[03:41:33] Total vehicles from files: 1781
+[03:41:33] Loaded 5 pickups from: pickups/25_4_update.txt
+[03:41:33] Total pickups from files: 5
+[03:41:33] 
+----------------------------------
+[03:41:33]   Running SA:MP ~Light Bullet Server
+
+[03:41:33]              Coded By
+[03:41:33]          Light Bullet team
+[03:41:33] ----------------------------------
+
+[03:41:33] Number of vehicle models: 173
