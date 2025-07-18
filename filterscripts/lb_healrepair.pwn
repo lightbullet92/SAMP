@@ -3,7 +3,6 @@
 #include <a_samp>
 #include <core>
 #include <float>
-#include <a_vehicles>
 
 #include "../include/lb_indexers.inc"
 
@@ -20,9 +19,20 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
     if(strcmp(cmd, "/heal", true) == 0) {
         new string[255];
-        SetPlayerHealth(playerid, 100.0);
-        format(string,sizeof(string),"You have been successfully healed.");
-        SendClientMessage(playerid,0x00FF00FF,string);
+        new Float:playerhealth;
+        GetPlayerHealth(playerid, playerhealth);
+        if(playerhealth < 100)
+        {
+            
+            SetPlayerHealth(playerid, 100.0);
+            format(string,sizeof(string),"You have been successfully healed.");
+            SendClientMessage(playerid,0x00FF00FF,string);
+        }
+        else
+        {
+            format(string,sizeof(string),"You are already healed.");
+            SendClientMessage(playerid,0x00FF00FF,string);
+        }
         return 1;
     }
     if(strcmp(cmd, "/repair", true) == 0) {
