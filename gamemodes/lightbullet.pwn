@@ -493,7 +493,7 @@ public GameModeExitFunc()
 
 public OnGameModeInit()
 {
-	SetGameModeText("Light Bullet's SA:MP server");
+	SetGameModeText("Light Bullet SA:MP Server");
 
 	ShowPlayerMarkers(0);
 	ShowNameTags(1);
